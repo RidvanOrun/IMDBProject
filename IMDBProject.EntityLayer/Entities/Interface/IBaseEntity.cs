@@ -13,6 +13,6 @@ namespace IMDBProject.EntityLayer.Entities.Interface
         DateTime? CreateDate { get; set ;  }
         DateTime? ModifiedDate { get; set; }
         DateTime? PassivedDAte { get; set; }       
-        Status? Status { get ; set ; }
+        Status Status { get ; set ; }
     }
 }

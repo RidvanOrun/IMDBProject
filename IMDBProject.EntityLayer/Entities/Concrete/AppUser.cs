@@ -23,16 +23,16 @@ namespace IMDBProject.EntityLayer.Entities.Concrete
         public string FirstName { get; set; }
         [Required]
         [MaxLength(20)]
-        [MinLength(5)]
+        [MinLength(2)]
         public string LastName { get; set; }
         public string FullName => FirstName + " " + LastName;
         [Required]
         [MaxLength(20)]
-        [MinLength(10)]
+        [MinLength(2)]
         public string UserName { get; set; }
         [Required]
         [MaxLength(25)]
-        [MinLength(10)]
+        [MinLength(2)]
         public string PAssword { get; set; }
         public Role Role { get; set; } //Enum Role classından Role türünde role alındı
 
@@ -40,6 +40,7 @@ namespace IMDBProject.EntityLayer.Entities.Concrete
         public DateTime? CreateDate { get ; set ; }
         public DateTime? ModifiedDate { get ; set ; }
         public DateTime? PassivedDAte { get ; set; }
-        public Status? Status { get ; set ; }
+        private Status _status=Status.Active;
+        public Status Status { get { return _status;} set { _status=value ; } }
     }
 }

@@ -39,6 +39,8 @@ namespace IMDBProject.EntityLayer.Entities.Concrete
         public DateTime? CreateDate { get; set; }
         public DateTime? ModifiedDate { get ; set ; }
         public DateTime? PassivedDAte { get ; set ; }
-        public Status? Status { get ; set ; }
+        private Status _status = Status.Active;
+        public Status Status { get { return _status; } set { _status = value; } }
+
     }
 }

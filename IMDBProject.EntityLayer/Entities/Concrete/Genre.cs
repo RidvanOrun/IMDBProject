@@ -24,6 +24,8 @@ namespace IMDBProject.EntityLayer.Entities.Concrete
         public DateTime? CreateDate { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public DateTime? ModifiedDate { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public DateTime? PassivedDAte { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public Status? Status { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        
+        private Status _status = Status.Active;
+        public Status Status { get { return _status; } set { _status = value; } }
     }
 }
